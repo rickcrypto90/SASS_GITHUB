@@ -1,0 +1,50 @@
+@import variable
+@import pixels
+
+@mixin article($color,$bordercolor,$font-size:1rem) 
+    color: $color
+    border-color: $bordercolor 
+    font-size: $font-size
+
+
+
+div 
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: pxtorem(16px)
+    border: pxtorem(1px) solid $red
+    align-items: center
+
+
+    h1
+        color: $green
+        border-bottom: pxtorem(1px) solid $blue
+        font-size: pxtorem(24px)
+        margin-bottom: pxtorem(16px)
+        margin-top: pxtorem(24px)
+        width: fit-content
+
+    section:first-of-type
+        display: flex 
+
+        article
+            @include article($blue,$green)
+            border-width:   pxtorem(1px)
+            border-style: solid
+            padding: pxtorem(24px) pxtorem(8px)
+            text-align: center
+            flex: 1
+
+        article:nth-child(2n + 2)
+            color: $red
+
+    section:last-of-type
+        width: 100%
+        margin-top: pxtorem(16px)
+        
+        article
+            @include article($green,$blue,pxtorem(24px))
+            border-width: pxtorem(1px)
+            border-style: solid
+            

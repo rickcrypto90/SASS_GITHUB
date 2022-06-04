@@ -1,0 +1,87 @@
+@import variable
+@import pixels
+
+@mixin article($color,$bordercolor,$font-size:1rem) 
+    color: $color
+    border-color: $bordercolor 
+    font-size: $font-size
+    
+%h1_h2
+    color: $green
+    border-bottom: pxtorem(1px) solid $blue
+    font-size: pxtorem(24px)
+    margin-bottom: pxtorem(16px)
+    margin-top: pxtorem(24px)
+    width: fit-content
+
+
+div 
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: pxtorem(16px)
+    border: pxtorem(1px) solid $red
+    align-items: center
+
+
+    h1
+        @extend %h1_h2
+    h2
+        @extend %h1_h2
+        padding: 1rem
+        border: 1px solid $red
+
+    section:first-of-type
+        display: flex 
+
+        article
+            @include article($blue,$green)
+            border-width:   pxtorem(1px)
+            border-style: solid
+            padding: pxtorem(24px) pxtorem(8px)
+            text-align: center
+            flex: 1
+
+            &:nth-child(2n + 2)
+                color: $red
+    section:nth-of-type(2)
+        display: flex
+        flex-flow: row nowrap
+        width: 100%
+        height: 100%
+        justify-content: space-around
+        align-items: center
+        padding: pxtorem(16px)
+
+        $i:1
+        @while $i <= 19
+            & div:nth-child(1n + #{$i})
+                color: lighten($black, 5% * $i)
+                background-color: darken($white, 5% * $i)
+            $i: $i + 1
+                
+
+        $sizes: 1rem, 2rem, 3rem   
+        @each $size in $sizes
+            .fs-#{$size}
+                font-size: $size
+                height: 45px
+                aspect-ratio: 1 /1
+                padding: 0
+                align-items: flex-start
+      
+                
+                &:nth-of-type(10)
+                    align-items: center
+                    color: $red
+                    background-color: $blue    
+          
+    section:last-of-type
+        width: 100%
+        margin-top: pxtorem(8px)
+        
+        article
+            @include article($green,$blue,pxtorem(24px))
+            border-width: pxtorem(1px)
+            border-style: solid
+            

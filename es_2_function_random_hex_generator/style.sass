@@ -1,0 +1,44 @@
+@function random-hex()
+  $rgb: ''
+  $i: 6
+  @while $i > 0 
+    $hex-unit: random(16) - 1
+    $letters: A, B, C, D, E, F
+    @if $hex-unit > 9 
+      $hex-unit: nth($letters, ($hex-unit - 9))
+    
+    $rgb: str-insert($rgb, ("" + $hex-unit), 0)
+    $i: $i - 1
+  
+  @return unquote("#"+"#{$rgb}")
+
+
+* 
+    margin: 0
+    padding: 0   
+    
+body
+    height: 100vh
+    width: 100vw
+   
+    .row
+        height: inherit
+        width: inherit
+
+        .col
+            $i: 1
+            @while $i <= 12
+                &:nth-child(#{$i})
+                    background: random-hex()
+                $i: $i + 1
+                
+
+        
+        
+                
+
+   
+
+               
+                    
+                

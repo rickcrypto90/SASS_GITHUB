@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+body .row {
+  height: inherit;
+  width: inherit;
+}
+body .row .col:nth-child(1) {
+  background: #70914A;
+}
+body .row .col:nth-child(2) {
+  background: #6960C6;
+}
+body .row .col:nth-child(3) {
+  background: #793C50;
+}
+body .row .col:nth-child(4) {
+  background: #1B28E2;
+}
+body .row .col:nth-child(5) {
+  background: #DB02A3;
+}
+body .row .col:nth-child(6) {
+  background: #8F8D6B;
+}
+body .row .col:nth-child(7) {
+  background: #0FF74B;
+}
+body .row .col:nth-child(8) {
+  background: #C2F73F;
+}
+body .row .col:nth-child(9) {
+  background: #FD341C;
+}
+body .row .col:nth-child(10) {
+  background: #D6B7F0;
+}
+body .row .col:nth-child(11) {
+  background: #8FF5CE;
+}
+body .row .col:nth-child(12) {
+  background: #BC3D14;
+}
+
+/*# sourceMappingURL=style.css.map */

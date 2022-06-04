@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    div {
+        margin: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: .5rem;
+        border: 1px solid red;
+        h1 {
+            color: green;
+            border-bottom: 1px solid violet;
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            margin-top: 1.5rem;
+        }
+    }
+    section {
+        display: flex;
+        article {
+            border: 1px solid green;
+            padding: 1.5rem .5rem;
+            flex: 1;
+        }
+        article:nth-child(odd) {
+            p {
+                color: blue;
+                margin: auto;
+                font-size: .8rem;
+                text-align: center;
+                word-break:keep-all;
+            }
+        }
+        article:nth-child(even) {
+            p {
+            color: red;
+            margin: auto;
+            font-size: .8rem;
+            text-align: center;
+            word-break:keep-all;
+            }
+        }
+    }
+}

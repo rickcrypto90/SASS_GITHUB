@@ -1,0 +1,50 @@
+div h2, div h1 {
+  color: green;
+  border-bottom: 0.0625rem solid blue;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  width: fit-content;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  align-items: center;
+}
+div h2 {
+  padding: 1rem;
+  border: 1px solid red;
+}
+div section:first-of-type {
+  display: flex;
+}
+div section:first-of-type article {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  flex: 1;
+}
+div section:first-of-type article:nth-child(2n+2) {
+  color: red;
+}
+div section:last-of-type {
+  width: 100%;
+  margin-top: 1rem;
+}
+div section:last-of-type article {
+  color: green;
+  border-color: blue;
+  font-size: 1.5rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+}
+
+/*# sourceMappingURL=style.css.map */
